@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: #F2F7FC;
+}
+
+/* === HEADER === */
+header {
+  background: #FFF;
+}
+
+header .menu-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo,
+footer .logo-footer {
+  display: flex;
+  align-items: center;
+}
+
+header .logo h1,
+footer .logo-footer h1 {
+  color: #0F5027;
+}
+
+header .logo img,
+footer .logo-footer img {
+  width: 75px;
+  height: 75px;
+}
+
+header .links a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #6E6E6E;
+  padding: 0 20px;
+
+  border-right: 2px solid #6E6E6E;
+}
+
+header .links a:last-child {
+  color: #FFF;
+  border: none;
+}
+
+header button {
+  margin-left: 15px;
+  padding: 8px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFF;
+
+  background-color: #0F5027;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* === SECTION-SHOW SLIDE === */
+.slideshow-container {
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  margin: auto;
+}
+
+.slides {
+  display: none;
+}
+
+.prev img, .next img {
+  width: 120px;
+  height: 120px;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  padding: 16px;
+
+  transition: 0.6s ease;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.next img{
+  right: 0;
+}
+
+.prev img:hover, .next img:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  position: absolute;
+  bottom: 75px;
+  width: 100%;
+
+  font-size: 30px;
+  color: #F2F2F2;
+  text-shadow: 0px 3px 6px #00000091;
+  text-align: center;
+}
+
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -50px;
+
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+
+  background-color: #BBB;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* === INDEX-ABOUT - CONTAINER === */
+.about-container .title{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.about-container .title h1{
+  font-size: 50px;
+  font-weight: bold;
+  color: #114A11;
+}
+
+.about-container .title p {
+  font-size: 24px;
+  color: #616161;
+}
+
+.about-grid-container-2 {
+  background: #93B659;
+}
+
+.about-container .about-grid-1,
+.about-container .about-grid-2 {
+  width: 100%;
+  max-width: 1400px;
+  margin: 60px auto;
+
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.about-container .about-grid-2 {
+  grid-template-columns: 1fr 300px;
+}
+
+.about-grid-1 .about-content p,
+.about-grid-2 .about-content p {
+  text-align: justify;
+  font-size: 30px;
+  line-height: 40px;
+  color: #151616;
+}
+
+.about-grid-1 .about-content p {
+  margin-left: 30px;
+}
+
+.about-grid-2 .about-content p {
+  margin-right: 30px;
+}
+
+/* === FOOTER-HOME === */
+footer {
+  width: 100%;
+  background: linear-gradient(180deg, #0F5027 0%, #031008 100%);
+  padding: 60px 0;
+}
+
+footer .logo-footer {
+  width: 400px;
+  height: 130px;
+  background: #FFF;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+footer .link-footer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+footer .link-footer a,
+footer .link-footer span {
+  font-size: 16px;
+  color: #FFF;
+}
+
+footer .link-footer span {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+footer .link-footer a:hover {
+  text-decoration: underline;
+}
+
+footer .media-social {
+  text-align: center;
+}
+
+footer .media-social img {
+  width: 50px;
+  height: 50px;
+  margin: 25px 20px 0;
+  border-radius: 50%;
+}
