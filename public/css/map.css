@@ -14,6 +14,8 @@
   display: flex;
 }
 
+/* === SIDEBAR MENU === */
+
 aside {
   width: 100%;
   max-width: 150px;
@@ -31,7 +33,21 @@ aside header {
 }
 
 aside header .icon-container {
+  position: relative;
   border-bottom: 3px solid #707070;
+}
+
+aside header .icon-container .icon.selected .sidebar-pointer {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: -15px;
+  background-color: #FFF;
+  border-radius: 2px;
+  transform: rotate(-45deg);
 }
 
 aside header .icon-container .icon {
@@ -99,13 +115,21 @@ aside header .icon-container .icon.selected::before {
   opacity: 25%;
 }
 
+aside header .icon-container .icon.selected:last-child:before {
+  background-color: #297F43;
+}
+
 aside header .icon-container .icon.selected span:last-child {
   font-weight: bold;
   color: #1459B4;
 }
 
-aside header .icon-container .icon.selected span:first-child {
+aside header .icon-container .icon.selected span[class='material-icons'] {
   color: #5085C9;
+}
+
+aside header .icon-container .icon.selected:last-child span {
+  color: #1D7D16;
 }
 
 footer .icon-logout {
@@ -134,4 +158,28 @@ footer .icon-logout span {
 #mapid {
   width: 100%;
   min-height: 100vh;
+  z-index: 3;
+}
+
+.popupTitle {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 10px;
+}
+
+.popupContent {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.popupFooter {
+  font-size: 14px;
+  text-align: right;
+}
+
+.popupFooterSpan {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 5px;
 }
