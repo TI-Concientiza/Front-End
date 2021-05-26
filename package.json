@@ -2,6 +2,15 @@
   "name": "adopt-a-tree",
   "version": "0.1.0",
   "private": true,
+  "contributors": [
+      {
+          "name": "Delfio Francisco",
+          "email": "delfio_eu@hotmail.com",
+          "url": "github.com/Delfio"
+      }
+  ],
+  "description": "No cenário mundial atual, o aquecimento global é resultante principalmente da intervenção do homem na natureza, ressaltando assim, a importância de aspectos relacionados à ética, à moral e à cultura que permeiam a sociedade. Igualmente como os problemas climáticos têm aumentado nos últimos anos, a busca de conhecimento para combater estes empecilhos também cresceu e fez com que muitas pessoas começassem a se conscientizar, despertando então, a vontade de buscar meios para combater este impasse. Levando em conta que as árvores auxiliam na recuperação do meio ambiente, e que ainda, podem melhorar a qualidade de vida das pessoas ao seu entorno, a procura por sementes e mudas aumentou. Com isso, a difusão de informação e a disponibilidade de mudas para atender a estademanda se torna de extrema importância para a obtenção de tais objetivo",
+  "license": "GPL v3",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
