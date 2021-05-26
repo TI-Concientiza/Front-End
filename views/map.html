@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt a Tree | Mapeamento</title>
+  <link rel="stylesheet" href="/public/css/map.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link 
+    rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""
+  />
+  <script 
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""
+  ></script>
+  
+</head>
+<body>
+  
+  <div id="page-map">
+    <aside>
+      <header>
+        <div class="icon-container">
+          <div class="icon selected">
+            <div class="sidebar-pointer"></div>
+            <span class="material-icons">home</span>
+            <span>Home</span>
+          </div>
+          
+          <div class="icon">
+            <div class="sidebar-pointer"></div>
+            <span class="material-icons">person</span>
+            <span>Perfil</span>
+          </div>
+          
+          <div class="icon">
+            <div class="sidebar-pointer"></div>
+            <span class="material-icons">list</span>
+            <span>Registros</span>
+          </div>
+  
+          <div class="icon">
+            <div class="sidebar-pointer"></div>
+            <span class="material-icons">notifications</span>
+            <span>Notificações</span>
+          </div>
+
+          <div class="icon selected">
+            <div class="sidebar-pointer"></div>
+            <span class="material-icons">where_to_vote</span>
+            <span>Adotar</span>
+          </div>
+        </div>
+      </header>
+
+      <footer>
+        <div class="icon-logout">
+          <p>Sair</p>
+          <span class="material-icons">logout</span>
+        </div>
+      </footer>
+    </aside>
+
+    <div id="mapid"></div>
+  </div>
+
+  <script src="/public/js/page-map.js"></script>
+</body>
+</html>
