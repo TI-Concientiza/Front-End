@@ -19,6 +19,10 @@
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.6.3",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.17",
     "next": "10.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
