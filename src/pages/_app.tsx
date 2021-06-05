@@ -2,7 +2,7 @@ import * as React from "react";
 import { AppProps } from "next/app";
 import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 
-import "../styles/global.scss";
+import "../styles/global.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
