@@ -12,10 +12,6 @@ export default class Document extends NextDocument {
                         content="minimum-scale=1, initial-scale=1, width=device-width"
                     />
 
-                    {/* SDK do firebase */}
-                    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js" />
-                    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js" />
-
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link
                         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
