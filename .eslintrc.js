@@ -32,6 +32,8 @@ module.exports = {
       // 'jest'
     ],
     rules: {
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "react/no-unused-prop-types": "off",
+        "react/require-default-props": "off"
     },
   };
