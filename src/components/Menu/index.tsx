@@ -70,6 +70,9 @@ export default function WithSubnavigation() {
                     {
                         label: "Assinatura !",
                         href: "#",
+                    },
+                ],
+            },
             {
                 label: "Empresas que apoiam a ideia",
             },

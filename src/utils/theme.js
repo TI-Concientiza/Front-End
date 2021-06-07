@@ -23,7 +23,9 @@ const theme = extendTheme({
             main: "#c53030",
         },
         spotlight: {
-            main: '#FBE170'
+            main: '#FBE170',
+            dark: '#264D27',
+            hover_dark: "#466847"
         }
     },
     fonts: {
