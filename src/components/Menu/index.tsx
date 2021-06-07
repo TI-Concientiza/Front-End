@@ -69,11 +69,7 @@ export default function WithSubnavigation() {
                     },
                     {
                         label: "Assinatura !",
-                        subLabel: "Assine nossa newsletter e contribua !",
                         href: "#",
-                    },
-                ],
-            },
             {
                 label: "Empresas que apoiam a ideia",
             },
