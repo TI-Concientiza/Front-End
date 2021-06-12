@@ -1,11 +1,9 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import Menu from "../components/Menu";
 
 export default function Home() {
     return (
         <>
-            <Menu />
             <Box
                 width="100%"
                 height="100vh"
@@ -13,6 +11,7 @@ export default function Home() {
                 alignItems="center"
                 justifyContent="center"
                 flexDirection="row"
+                bg="global.bg"
             >
                 <Text
                     textAlign="center"
