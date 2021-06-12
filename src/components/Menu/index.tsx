@@ -23,6 +23,7 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from "@chakra-ui/icons";
+import DefaultButton from "../ButtonDefault";
 
 interface NavItem {
     label: string;
@@ -259,7 +260,7 @@ export default function WithSubnavigation() {
     };
 
     return (
-        <Box>
+        <header>
             <Flex
                 bg="global.bg"
                 minH="60px"
@@ -317,25 +318,19 @@ export default function WithSubnavigation() {
                     >
                         <Text fontWeight="bold">Inscreva-se</Text>
                     </Button>
-                    <Button
-                        display={{ base: "none", md: "inline-flex" }}
-                        fontSize="sm"
-                        fontWeight={600}
-                        color="white"
-                        bg="primary.main"
-                        href="#"
-                        _hover={{
-                            bg: "primary.dark",
+                    <DefaultButton
+                        buttonProps={{
+                            error: false,
+                            title: "Entrar",
+                            action: () => console.log("Entrando.."),
                         }}
-                    >
-                        Entrar
-                    </Button>
+                    />
                 </Stack>
             </Flex>
 
             <Collapse in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
-        </Box>
+        </header>
     );
 }
