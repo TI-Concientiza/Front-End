@@ -7,10 +7,13 @@ import {
     AccordionItem,
     AccordionButton,
     AccordionIcon,
+    VStack,
+    Center,
     AccordionPanel,
 } from "@chakra-ui/react";
 import Container from "../../components/Container";
 import CardBusiness from "../../components/CardBusiness";
+import BttonDefault from "../../components/ButtonDefault";
 // import { Container } from './styles';
 
 const empresa = [
@@ -79,16 +82,48 @@ const Teste = () => (
     </Accordion>
 );
 
+const FooterTitle = () => {
+    return (
+        <VStack width="full" p={20}>
+            <Box width="350px">
+                <Text
+                    fontWeight="bold"
+                    fontSize="xl"
+                    textAlign="center"
+                    color="secondary.contrastText"
+                >
+                    Estas são as empresas que contribuem ativamente com a ideia
+                    !
+                </Text>
+            </Box>
+            <Box marginTop="10px">
+                <BttonDefault
+                    buttonProps={{
+                        error: false,
+                        title: "Apoiar",
+                    }}
+                />
+            </Box>
+        </VStack>
+    );
+};
+
 const empresas: React.FC = () => {
     return (
         <Container title="Veja as empresas que apoiam a ideia">
-            <CardBusiness
-                emp_props={{
-                    description: empresa[0].description,
-                    name: empresa[0].name,
-                    profileImgURL: "/img/emps/logo-img.png",
-                }}
-            />
+            <HStack irection={["column", "row"]} spacing="30px">
+                {empresa.map((el) => (
+                    <CardBusiness
+                        key={el.id}
+                        emp_props={{
+                            description: empresa[0].description,
+                            name: empresa[0].name,
+                            profileImgURL: "/img/emps/logo-img.png",
+                        }}
+                    />
+                ))}
+            </HStack>
+            <FooterTitle />
         </Container>
     );
 };
