@@ -6,7 +6,7 @@ import Menu from "../components/Menu";
 
 import "../styles/global.scss";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     return (
         <ChakraProvider theme={thema}>
             <CSSReset />
@@ -14,6 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
         </ChakraProvider>
     );
-}
+};
 
 export default MyApp;

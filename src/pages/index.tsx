@@ -3,7 +3,7 @@ import { Box, Button, Image, Text, Flex } from "@chakra-ui/react";
 
 import Menu from "../components/Menu";
 
-export default function Home() {
+const Home: React.FC = () => {
     return (
         <>
             <Menu />
@@ -205,4 +205,6 @@ export default function Home() {
             </Flex>
         </>
     );
-}
+};
+
+export default Home;

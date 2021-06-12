@@ -5,7 +5,7 @@ import { Box, Image, Text } from "@chakra-ui/react";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-export default function Slideshow() {
+const Slideshow: React.FC = () => {
     return (
         <>
             <Box className="slide-container">
@@ -68,4 +68,6 @@ export default function Slideshow() {
             </Box>
         </>
     );
-}
+};
+
+export default Slideshow;
