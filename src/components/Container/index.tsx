@@ -21,8 +21,7 @@ const Container: React.FC<IContainerProps> = ({ children, title }) => {
             display="flex"
             alignItems="center"
             flexDirection="column"
-            // bg="global.bg"
-            bg="black"
+            bg="global.bg"
         >
             {title && (
                 <Wrapper mt={{ base: 10 }}>

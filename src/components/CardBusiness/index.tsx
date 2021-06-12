@@ -4,7 +4,6 @@ import React from "react";
 import {
     Image,
     Center,
-    Lorem,
     Flex,
     Text,
     VStack,
@@ -20,8 +19,8 @@ import { ICardBusinessProps } from "./ICardBusiness";
 const ImageProfileWrapper = ({ img }) => {
     return (
         <Center
-            w={270}
-            h={270}
+            w={280}
+            h={280}
             overflow="hidden"
             bg="white"
             borderRadius="full"
@@ -40,8 +39,12 @@ const CardBusiness: React.FC<ICardBusinessProps> = ({ emp_props }) => {
 
     const TituloEmpresa = ({ title }) => {
         return (
-            <VStack p="10px 0 15px" borderBottomRadius="md" bg="red">
-                <Text fontWeight="bold" color="secondary.contrastText">
+            <VStack p="10px 0" w="100%">
+                <Text
+                    fontWeight="bold"
+                    fontSize="2xl"
+                    color="secondary.contrastText"
+                >
                     {title}
                 </Text>
                 <Center
@@ -51,6 +54,7 @@ const CardBusiness: React.FC<ICardBusinessProps> = ({ emp_props }) => {
                     justifyContent="center"
                     alignItems="center"
                     border="2px solid rgba(24, 124, 255, 0.6)"
+                    overflow="hidden"
                     boxShadow="md"
                     // boxShadow="outline"
                     w={30}
@@ -65,29 +69,48 @@ const CardBusiness: React.FC<ICardBusinessProps> = ({ emp_props }) => {
             </VStack>
         );
     };
+
+    const CardCollapse = ({ des = "" }) => {
+        return (
+            <Box
+                color="white"
+                p="0 10px 20px"
+                borderEndRadius="lg"
+                shadow="md"
+                h="auto"
+            >
+                <Text
+                    fontSize="sm"
+                    textAlign="center"
+                    color="secondary.contrastText"
+                    noOfLines={10}
+                >
+                    {des}
+                </Text>
+            </Box>
+        );
+    };
+
     return (
         <Flex
             pos="relative"
             direction="column"
+            w="283px"
             bg="white"
-            borderTopRadius="50%"
-            borderBottomRadius="3xl"
+            borderTopRadius="full"
             boxShadow="xl"
+            alignItems="center"
         >
-            <ImageProfileWrapper img={profileImgURL} />
+            <Box bg="white" borderTopRadius="full" w="full">
+                <ImageProfileWrapper img={profileImgURL} />
+            </Box>
 
             <TituloEmpresa title={name} />
-            <Collapse in={isOpen} animateOpacity>
-                <Box
-                    p="40px"
-                    color="white"
-                    bg="teal.500"
-                    rounded="md"
-                    shadow="md"
-                >
-                    <Text>asdf</Text>
-                </Box>
-            </Collapse>
+            <Box width="100%">
+                <Collapse in={isOpen} animateOpacity>
+                    <CardCollapse des={description} />
+                </Collapse>
+            </Box>
         </Flex>
     );
 };

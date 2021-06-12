@@ -6,7 +6,6 @@ import Menu from "../components/Menu";
 const Home: React.FC = () => {
     return (
         <>
-            <Menu />
             <Box position="relative">
                 <Box
                     background={{
@@ -99,7 +98,7 @@ const Home: React.FC = () => {
                     />
                     <Text
                         textAlign="center"
-                        ffontSize={{ base: "sm", md: "md", xl: "xl" }}
+                        fontSize={{ base: "sm", md: "md", xl: "xl" }}
                         fontWeight="bold"
                         color="primary.contrastText"
                     >
@@ -120,7 +119,7 @@ const Home: React.FC = () => {
                     />
                     <Text
                         textAlign="center"
-                        ffontSize={{ base: "sm", md: "md", xl: "xl" }}
+                        fontSize={{ base: "sm", md: "md", xl: "xl" }}
                         fontWeight="bold"
                         color="primary.contrastText"
                     >

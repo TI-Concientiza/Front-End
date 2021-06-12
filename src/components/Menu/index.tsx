@@ -259,7 +259,7 @@ export default function WithSubnavigation() {
     };
 
     return (
-        <Box>
+        <header>
             <Flex
                 bg="global.bg"
                 minH="60px"
@@ -336,6 +336,6 @@ export default function WithSubnavigation() {
             <Collapse in={isOpen} animateOpacity>
                 <MobileNav />
             </Collapse>
-        </Box>
+        </header>
     );
 }
