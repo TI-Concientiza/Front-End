@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Button, Image, Text, Flex } from "@chakra-ui/react";
-
-import Menu from "../components/Menu";
+import { shade } from "polished";
 
 const Home: React.FC = () => {
     return (
@@ -9,11 +8,9 @@ const Home: React.FC = () => {
             <Box position="relative">
                 <Box
                     background={{
-                        base: "url('/img/homepage/banner-home.jpg') no-repeat center center / cover",
-                        md: "url('/img/homepage/banner-home.jpg') no-repeat center center / 100% 100%",
-                        xl: "url('/img/homepage/banner-home.jpg') no-repeat center center / 100% 100%",
+                        base: "url('/img/homepage/banner-home.jpg') no-repeat bottom center / cover",
                     }}
-                    height={{ base: "150px", md: "350px", xl: "350px" }}
+                    height={["300px", "600px"]}
                 >
                     <Box
                         width="100%"
@@ -23,7 +20,7 @@ const Home: React.FC = () => {
                         zIndex="1"
                     >
                         <Text
-                            fontSize={{ base: "sm", md: "md", xl: "xl" }}
+                            fontSize="3xl"
                             color="primary.contrastText"
                             fontWeight="bold"
                         >
@@ -36,6 +33,10 @@ const Home: React.FC = () => {
                             fontWeight="normal"
                             color="primary.contrastText"
                             rounded="full"
+                            width={[150, 60]}
+                            _hover={{
+                                bg: shade(0.2, "#016EC4"),
+                            }}
                         >
                             Adote uma árvore
                         </Button>
