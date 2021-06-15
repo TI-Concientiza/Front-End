@@ -8,7 +8,6 @@ import {
     AccordionButton,
     AccordionIcon,
     VStack,
-    Center,
     AccordionPanel,
 } from "@chakra-ui/react";
 import Container from "../../components/Container";

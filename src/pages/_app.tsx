@@ -5,6 +5,7 @@ import thema from "../utils/theme";
 import Menu from "../components/Menu";
 
 import "../styles/global.scss";
+import "../styles/strong-text.css";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     return (
