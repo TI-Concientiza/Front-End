@@ -1,8 +1,27 @@
 import React from "react";
-import { Box, Button, Image, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, Image, Text, Flex, Stack } from "@chakra-ui/react";
 import { shade } from "polished";
+import Container from "../components/Container";
 
 const Home: React.FC = () => {
+    const InfosForAdoptATree = React.useMemo(
+        () => [
+            {
+                title: "Ajude a arborizar a sua cidade",
+                img_url: "/icons/seeding-icon.svg",
+            },
+            {
+                title: "Contribua para o seu planeta",
+                img_url: "/icons/earth-icon.svg",
+            },
+            {
+                title: "Ajude na qualidade de vida de sua cidade",
+                img_url: "/icons/dumbbellsExercise-icon.svg",
+            },
+        ],
+        []
+    );
+
     return (
         <>
             <Box position="relative">
@@ -52,90 +71,45 @@ const Home: React.FC = () => {
                     zIndex="0"
                 />
             </Box>
-
-            <Flex
-                flexDirection={{ base: "column", md: "row", xl: "row" }}
-                alignItems={{ base: "center" }}
-                width="100%"
-                bg="#22DC67"
-                justifyContent="space-evenly"
-                px={{ base: 0, md: 0, xl: 10 }}
-                py={5}
-                position="relative"
-            >
-                <Flex
-                    mb={{ base: 5, md: 0, xl: 0 }}
-                    width={{ base: "auto", md: "auto", xl: "200px" }}
-                    flexDirection={{ base: "row", md: "column", xl: "column" }}
-                    alignItems="center"
+            <Container background_default="#22DC67">
+                <Stack
+                    direction={["column", "row"]}
+                    spacing={["20px", "150px"]}
+                    py={[10, 5]}
                 >
-                    <Image
-                        width={{ base: "30px", md: "80px", xl: "80px" }}
-                        height={{ base: "30px", md: "80px", xl: "80px" }}
-                        mr={{ base: 5, md: 0, xl: 0 }}
-                        src="/icons/seeding-icon.svg"
-                    />
-                    <Text
-                        textAlign="center"
-                        fontSize={{ base: "sm", md: "md", xl: "xl" }}
-                        fontWeight="bold"
-                        color="primary.contrastText"
-                    >
-                        Ajude a arborizar a sua cidade
-                    </Text>
-                </Flex>
-
-                <Flex
-                    mb={{ base: 5, md: 0, xl: 0 }}
-                    width="200px"
-                    flexDirection={{ base: "row", md: "column", xl: "column" }}
-                    alignItems="center"
-                >
-                    <Image
-                        width={{ base: "30px", md: "80px", xl: "80px" }}
-                        height={{ base: "30px", md: "80px", xl: "80px" }}
-                        mr={{ base: 5, md: 0, xl: 0 }}
-                        src="/icons/earth-icon.svg"
-                    />
-                    <Text
-                        textAlign="center"
-                        fontSize={{ base: "sm", md: "md", xl: "xl" }}
-                        fontWeight="bold"
-                        color="primary.contrastText"
-                    >
-                        Contribua para o seu planeta
-                    </Text>
-                </Flex>
-
-                <Flex
-                    width="200px"
-                    flexDirection={{ base: "row", md: "column", xl: "column" }}
-                    alignItems="center"
-                >
-                    <Image
-                        width={{ base: "30px", md: "80px", xl: "80px" }}
-                        height={{ base: "30px", md: "80px", xl: "80px" }}
-                        mr={{ base: 5, md: 0, xl: 0 }}
-                        src="/icons/dumbbellsExercise-icon.svg"
-                    />
-                    <Text
-                        textAlign="center"
-                        fontSize={{ base: "sm", md: "md", xl: "xl" }}
-                        fontWeight="bold"
-                        color="primary.contrastText"
-                    >
-                        Ajude na qualidade de vida de sua cidade
-                    </Text>
-                </Flex>
-
-                <Box
-                    width="100%"
-                    height="100%"
-                    position="absolute"
-                    bottom="0"
-                    bgGradient="linear(to-b, transparent)"
-                />
-            </Flex>
+                    {InfosForAdoptATree.map((element) => (
+                        <Flex
+                            width={{ base: "auto", md: "auto", xl: "200px" }}
+                            flexDirection={{
+                                base: "row",
+                                md: "column",
+                                xl: "column",
+                            }}
+                            alignItems="center"
+                        >
+                            <Image
+                                width="auto"
+                                height={{
+                                    base: 20,
+                                    md: "80px",
+                                    xl: "80px",
+                                }}
+                                mr={{ base: 5, md: 0, xl: 0 }}
+                                alt={element.title}
+                                src={element.img_url}
+                            />
+                            <Text
+                                textAlign="center"
+                                fontSize={{ base: "sm", md: "md", xl: "xl" }}
+                                fontWeight="bold"
+                                color="primary.contrastText"
+                            >
+                                {element.title}
+                            </Text>
+                        </Flex>
+                    ))}
+                </Stack>
+            </Container>
 
             <Flex
                 flexDirection={{ base: "column", md: "column", xl: "row" }}
