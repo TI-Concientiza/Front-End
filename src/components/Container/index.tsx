@@ -6,22 +6,29 @@ import {
     Divider,
     Container as Wrapper,
     Center,
+    ContainerProps,
 } from "@chakra-ui/react";
 // import { Container } from './styles';
 
 type IContainerProps = {
     title?: string;
+    container_props?: ContainerProps;
+    background_default?: string;
 };
 
-const Container: React.FC<IContainerProps> = ({ children, title }) => {
+const Container: React.FC<IContainerProps> = ({
+    children,
+    title,
+    background_default,
+    container_props,
+}) => {
     return (
         <Box
             width="100%"
-            height="100%"
+            height="auto"
             display="flex"
             alignItems="center"
-            flexDirection="column"
-            bg="global.bg"
+            bg={background_default || "global.bg"}
         >
             {title && (
                 <Wrapper mt={{ base: 10 }}>
@@ -41,7 +48,9 @@ const Container: React.FC<IContainerProps> = ({ children, title }) => {
                     </Center>
                 </Wrapper>
             )}
-            {children}
+            <Wrapper {...container_props} maxW="container.xl" centerContent>
+                {children}
+            </Wrapper>
         </Box>
     );
 };
