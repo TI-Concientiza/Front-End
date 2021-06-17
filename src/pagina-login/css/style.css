@@ -1,0 +1,119 @@
+ body {
+    background: #F2F7FC 0% 0% padding-box;
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+}
+ header {
+    width: 413px;
+    height: 136px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+ #logo {
+   margin-top: 161px;
+   margin-left: 618px;
+   width: 285px;
+   height: 91px;
+}
+ section {
+    width: 1223px;
+    height: 580px;
+}
+ .logo {
+    width: 346px;
+    height: 346px;
+    opacity: 1;
+}
+ .form-container {
+   align-items: center;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   text-align: center;
+   margin-left: 243px;
+ }
+ .form {
+   width: 491px;
+   height: 409px;
+   opacity: 1;
+}
+  h1 {
+   width: 382px;
+   height: 36px;
+   text-align: left;
+   font: normal normal 900 64px/86px Segoe UI;
+   letter-spacing: 0px;
+   color: #0F703F;
+   opacity: 1;
+}
+ .item {
+   width: 434px;
+   height: 91px;
+   text-align: left;
+   font: normal normal 600 25px/33px Segoe UI;
+   letter-spacing: 0px;
+   color: #727272;
+   opacity: 1;
+ }
+ #primeironome{
+   width: 425px;
+   height: 52px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   opacity: 1;
+   font-size: 24px;
+   border-radius: 3px;   
+ }
+ #ultnome {
+   width: 425px;
+   height: 52px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   opacity: 1;
+   font-size: 24px;
+   border-radius: 3px;
+ }
+ #email {
+   width: 425px;
+   height: 52px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   opacity: 1;
+   font-size: 24px;
+   border-radius: 3px;
+ }
+ #senha {
+   width: 425px;
+   height: 52px;
+   background: #FFFFFF 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   opacity: 1; 
+   font-size: 24px;
+   border-radius: 3px;
+ }
+ button{
+   width: 435px;
+   height: 61px;
+   background: #0F703F 0% 0% no-repeat padding-box;
+   border: 1px solid #707070;
+   opacity: 1;
+   font: normal normal 900 25px/34px Segoe UI;
+   color: #FFFFFF;
+   margin-left: -56px;
+   margin-top: 12px;
+ }
+ .link {
+   text-align: center;
+   font: normal normal 600 25px/33px Segoe UI;
+   letter-spacing: 0px;
+   color: #AB710D;
+   opacity: 1;
+   margin-right: 55px;
+   margin-top: 8px;
+   text-decoration: none;
+ }
+ a{
+   color: #AB710D;
+ }
