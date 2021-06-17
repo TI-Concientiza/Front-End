@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SideBar from '../components/SideBar/index';
-import { useFormik } from 'formik';
 import { Flex, Text, Input, FormControl, FormLabel, FormHelperText, InputGroup, InputRightElement, Button } from '@chakra-ui/react';
 import Layout from '../components/Layout';
 
