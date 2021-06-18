@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 :root {
@@ -15,6 +15,14 @@
     --gray-200: #f0f0f0;
     --gray-500: #6E6E6E;
     --gray-700: #707070;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--cool) !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body, input, textarea, select, button {

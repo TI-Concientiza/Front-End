@@ -1,0 +1,17 @@
+strong.bad {
+    color: var(--red) !important;
+}
+
+strong.happy {
+    color: var(--green) !important;
+}
+
+strong.nv1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+strong.nv2 {
+    font-size: 27px;
+    font-weight: bold;
+}
