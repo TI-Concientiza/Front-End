@@ -16,7 +16,7 @@ export default function Sidebar() {
             id: 2,
             title: "Perfil",
             icon: MdPerson,
-            href: "https://www.youtube.com",
+            href: "/dashboard/profile",
         },
         {
             id: 3,
@@ -44,7 +44,12 @@ export default function Sidebar() {
                 {SidebarData.map((val) => {
                     return (
                         <Box
-                            role="group"
+                            _notFirst={{
+                                mt: "5px",
+                            }}
+                            _last={{
+                                mb: "10px",
+                            }}
                             onClick={() => {
                                 window.location.pathname = val.href;
                             }}
@@ -97,9 +102,9 @@ export default function Sidebar() {
                 flexDirection="column"
                 justifyContent="space-between"
                 borderRight="1px solid black"
-                p="4px"
+                p="4px 8px"
             >
-                <Box>
+                <Box borderBottom="3px solid #707070">
                     <NavItem />
                 </Box>
                 <NavFooter />
