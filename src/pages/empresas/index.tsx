@@ -10,6 +10,7 @@ import {
     VStack,
     AccordionPanel,
 } from "@chakra-ui/react";
+import Menu from "../../components/Menu";
 import Container from "../../components/Container";
 import CardBusiness from "../../components/CardBusiness";
 import BttonDefault from "../../components/ButtonDefault";
@@ -109,21 +110,24 @@ const FooterTitle = () => {
 
 const empresas: React.FC = () => {
     return (
-        <Container title="Veja as empresas que apoiam a ideia">
-            <HStack irection={["column", "row"]} spacing="30px">
-                {empresa.map((el) => (
-                    <CardBusiness
-                        key={el.id}
-                        emp_props={{
-                            description: empresa[0].description,
-                            name: empresa[0].name,
-                            profileImgURL: "/img/emps/logo-img.png",
-                        }}
-                    />
-                ))}
-            </HStack>
-            <FooterTitle />
-        </Container>
+        <>
+            <Menu />
+            <Container title="Veja as empresas que apoiam a ideia">
+                <HStack irection={["column", "row"]} spacing="30px">
+                    {empresa.map((el) => (
+                        <CardBusiness
+                            key={el.id}
+                            emp_props={{
+                                description: empresa[0].description,
+                                name: empresa[0].name,
+                                profileImgURL: "/img/emps/logo-img.png",
+                            }}
+                        />
+                    ))}
+                </HStack>
+                <FooterTitle />
+            </Container>
+        </>
     );
 };
 
