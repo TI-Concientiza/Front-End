@@ -1,8 +1,8 @@
 import React from "react";
 import { Text, Flex, Box } from "@chakra-ui/react";
-import SidebarLayout from "../../components/Sidebar";
+import SidebarLayout from "../../../components/Sidebar";
 
-const Dashboard: React.FC = () => {
+const Registers: React.FC = () => {
     return (
         <>
             <Flex>
@@ -13,11 +13,11 @@ const Dashboard: React.FC = () => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    <Text>Home</Text>
+                    <Text>Registers</Text>
                 </Flex>
             </Flex>
         </>
     );
 };
 
-export default Dashboard;
+export default Registers;
