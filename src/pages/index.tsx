@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Button, Image, Text, Flex, Stack } from "@chakra-ui/react";
 import { shade } from "polished";
 import PillPity from "pill-pity";
+import Link from "next/link";
 import Container from "../components/Container";
 import Menu from "../components/Menu";
 
@@ -60,7 +61,7 @@ const Home: React.FC = () => {
                                 bg: shade(0.2, "#016EC4"),
                             }}
                         >
-                            Adote uma árvore
+                            <Link href="/adote">Adote uma árvore</Link>
                         </Button>
                     </Box>
                 </Box>
@@ -93,6 +94,7 @@ const Home: React.FC = () => {
                                 xl: "column",
                             }}
                             alignItems="center"
+                            key={element.title}
                         >
                             <Image
                                 width="auto"

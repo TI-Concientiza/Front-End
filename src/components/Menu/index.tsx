@@ -23,6 +23,8 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from "@chakra-ui/icons";
+import NextLink from "next/link";
+import { useRouter } from "next/router";
 import DefaultButton from "../ButtonDefault";
 
 interface NavItem {
@@ -33,6 +35,13 @@ interface NavItem {
 }
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
+
+    const { push } = useRouter();
+
+    const handleClickLoginButton = React.useCallback(() => {
+        push("/login");
+    }, [push]);
+
     const NAV_ITEMS = React.useMemo<Array<NavItem>>(
         () => [
             {
@@ -41,17 +50,17 @@ export default function WithSubnavigation() {
                     {
                         label: "Facebook",
                         subLabel: "Curta nosssa página no facebook",
-                        href: "#",
+                        href: "https://www.facebook.com/Adopt-a-Tree-110037731233124",
                     },
                     {
                         label: "Instagram",
                         subLabel: "Siga-nos no instagram",
-                        href: "#",
+                        href: "https://www.instagram.com/adoptatree_fundation/?igshid=1051atzsv9zou",
                     },
                     {
                         label: "Linkedin",
                         subLabel: "Siga-nos no Linkedin",
-                        href: "#",
+                        href: "https://www.linkedin.com/in/adopt-a-tree-430079211/",
                     },
                 ],
             },
@@ -66,16 +75,17 @@ export default function WithSubnavigation() {
                     {
                         label: "Adote !",
                         subLabel: "Adote uma ávore pela nossa plataforma !",
-                        href: "#",
+                        href: "/adote",
                     },
                     {
                         label: "Assinatura !",
-                        href: "#",
+                        href: "/login",
                     },
                 ],
             },
             {
                 label: "Empresas que apoiam a ideia",
+                href: "/empresas",
             },
         ],
         []
@@ -100,11 +110,14 @@ export default function WithSubnavigation() {
                         <Text
                             transition="all .3s ease"
                             _groupHover={{ color: "spotlight.main" }}
+                            color="white"
                             fontWeight={500}
                         >
                             {label}
                         </Text>
-                        <Text fontSize="sm">{subLabel}</Text>
+                        <Text color="#D9D9D9" fontSize="sm">
+                            {subLabel}
+                        </Text>
                     </Box>
                     <Flex
                         transition="all .3s ease"
@@ -145,9 +158,11 @@ export default function WithSubnavigation() {
                     >
                         <Popover trigger="hover" placement="bottom-start">
                             <PopoverTrigger>
-                                <Link
+                                <Text
                                     p={2}
-                                    href={navItem.href ?? "#"}
+                                    style={{
+                                        cursor: "pointer",
+                                    }}
                                     fontSize="sm"
                                     fontWeight="bold"
                                     color="#6E6E6E"
@@ -156,8 +171,10 @@ export default function WithSubnavigation() {
                                         color: "#AEAEAE",
                                     }}
                                 >
-                                    {navItem.label}
-                                </Link>
+                                    <NextLink href={navItem.href ?? "#"}>
+                                        {navItem.label}
+                                    </NextLink>
+                                </Text>
                             </PopoverTrigger>
 
                             {navItem.children && (
@@ -294,8 +311,18 @@ export default function WithSubnavigation() {
                         aria-label="Toggle Navigation"
                     />
                 </Flex>
-                <Flex justify={{ base: "center", md: "start" }}>
-                    <Image src="/img/logo.png" alt="Logo" w="auto" maxH={55} />
+                <Flex
+                    cursor="pointer"
+                    justify={{ base: "center", md: "start" }}
+                >
+                    <NextLink href="/">
+                        <Image
+                            src="/img/logo.png"
+                            alt="Logo"
+                            w="auto"
+                            maxH={55}
+                        />
+                    </NextLink>
                 </Flex>
 
                 <Stack
@@ -322,7 +349,7 @@ export default function WithSubnavigation() {
                         buttonProps={{
                             error: false,
                             title: "Entrar",
-                            action: () => console.log("Entrando.."),
+                            action: handleClickLoginButton,
                         }}
                     />
                 </Stack>

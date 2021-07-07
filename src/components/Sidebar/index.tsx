@@ -3,6 +3,8 @@ import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import { MdHome, MdPerson, MdList, MdNotifications } from "react-icons/md";
 import { SiGumtree } from "react-icons/si";
 import { ImExit } from "react-icons/im";
+import Link from "next/link";
+import { IconType } from "react-icons/lib";
 
 export default function Sidebar() {
     const SidebarData = [
@@ -38,6 +40,21 @@ export default function Sidebar() {
         },
     ];
 
+    // O link do next não suporta 2 filhos
+    // Então você cria um container que no final fica 1 filho só
+    const NavChildren = ({
+        title,
+        icon,
+    }: {
+        title: string;
+        icon: IconType;
+    }) => (
+        <>
+            <Icon m="0 2px" boxSize="40px" as={icon} />
+            {title}
+        </>
+    );
+
     const NavItem = () => {
         return (
             <>
@@ -53,6 +70,7 @@ export default function Sidebar() {
                             onClick={() => {
                                 window.location.pathname = val.href;
                             }}
+                            key={String(val.id)}
                         >
                             <Flex
                                 flexDirection="column"
@@ -68,8 +86,12 @@ export default function Sidebar() {
                                 fontWeight="semibold"
                                 transition=".15s ease"
                             >
-                                <Icon m="0 2px" boxSize="40px" as={val.icon} />
-                                {val.title}
+                                <Link href={val.href}>
+                                    <NavChildren
+                                        icon={val.icon}
+                                        title={val.title}
+                                    />
+                                </Link>
                             </Flex>
                         </Box>
                     );

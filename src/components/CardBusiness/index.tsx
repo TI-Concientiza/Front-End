@@ -33,6 +33,11 @@ const ImageProfileWrapper = ({ img }) => {
     );
 };
 
+// TODO --
+/**
+ * Corrigir a implementação do colapse
+ */
+
 const CardBusiness: React.FC<ICardBusinessProps> = ({ emp_props }) => {
     const { description, name, profileImgURL } = emp_props;
     const { isOpen, onToggle } = useDisclosure();
@@ -47,7 +52,7 @@ const CardBusiness: React.FC<ICardBusinessProps> = ({ emp_props }) => {
                 >
                     {title}
                 </Text>
-                <Center
+                {/* <Center
                     pos="absolute"
                     bg="white"
                     bottom="-15px"
@@ -65,7 +70,7 @@ const CardBusiness: React.FC<ICardBusinessProps> = ({ emp_props }) => {
                     <Link onClick={onToggle}>
                         <ArrowUpDownIcon color="blue" />
                     </Link>
-                </Center>
+                </Center> */}
             </VStack>
         );
     };
@@ -107,7 +112,7 @@ const CardBusiness: React.FC<ICardBusinessProps> = ({ emp_props }) => {
 
             <TituloEmpresa title={name} />
             <Box width="100%">
-                <Collapse in={isOpen} animateOpacity>
+                <Collapse in animateOpacity>
                     <CardCollapse des={description} />
                 </Collapse>
             </Box>

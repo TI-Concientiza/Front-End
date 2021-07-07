@@ -27,6 +27,7 @@ const Container: React.FC<IContainerProps> = ({
             width="100%"
             height="auto"
             display="flex"
+            flexDir="column"
             alignItems="center"
             bg={background_default || "global.bg"}
         >

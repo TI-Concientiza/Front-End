@@ -2,7 +2,7 @@ import React from "react";
 import {
     Text,
     Box,
-    HStack,
+    Stack,
     Accordion,
     AccordionItem,
     AccordionButton,
@@ -112,11 +112,11 @@ const empresas: React.FC = () => {
     return (
         <>
             <Menu />
-            <Container title="Veja as empresas que apoiam a ideia">
-                <HStack irection={["column", "row"]} spacing="30px">
+            <Container title="Estas são as empresas que apoiam a ideia">
+                <Stack direction={["column", "row"]} spacing="30px">
                     {empresa.map((el) => (
                         <CardBusiness
-                            key={el.id}
+                            key={String(el.id)}
                             emp_props={{
                                 description: empresa[0].description,
                                 name: empresa[0].name,
@@ -124,9 +124,10 @@ const empresas: React.FC = () => {
                             }}
                         />
                     ))}
-                </HStack>
-                <FooterTitle />
+                </Stack>
             </Container>
+
+            <FooterTitle />
         </>
     );
 };
