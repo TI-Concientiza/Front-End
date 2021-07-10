@@ -1,23 +1,34 @@
 import React from "react";
-import { Text, Flex, Box } from "@chakra-ui/react";
+import { Flex, Box, Heading, Image } from "@chakra-ui/react";
 import SidebarLayout from "../../../components/Sidebar";
 
-const Registers: React.FC = () => {
+const Register: React.FC = () => {
     return (
         <>
-            <Flex>
-                <SidebarLayout />
-                <Flex
-                    w="100%"
-                    flexDirection="column"
-                    alignItems="center"
-                    justifyContent="center"
-                >
-                    <Text>Registers</Text>
+            <Box w="100%" minH="100vh">
+                <Flex>
+                    <Box pos="fixed" minH="100vh">
+                        <SidebarLayout />
+                    </Box>
+                    <Box w="100%" p="20px" ml="150px">
+                        <Box>
+                            <Heading>Seus Registros</Heading>
+
+                            <Flex justifyContent="center" mt="150px">
+                                <Flex alignItems="center">
+                                    <Image
+                                        src="/img/registers/not-registers.svg"
+                                        h="300px"
+                                    />
+                                    <Heading>Não há registros</Heading>
+                                </Flex>
+                            </Flex>
+                        </Box>
+                    </Box>
                 </Flex>
-            </Flex>
+            </Box>
         </>
     );
 };
 
-export default Registers;
+export default Register;
